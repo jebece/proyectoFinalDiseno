@@ -1,0 +1,58 @@
+@use '../custom' as *;
+@use '../base/variables' as *;
+
+.navigation {
+    &__logo {
+        .logo {
+            max-width: 10rem;
+        }
+
+        @include media-breakpoint-up(lg) {
+            .logo {
+                display: none;
+            }
+        }
+    }
+
+    &__link {
+        font-size: $fsize-2;
+
+        @include media-breakpoint-up(lg) {
+            position: relative;
+            overflow: hidden;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                background-color: $dark_green;
+                width: 0;
+                height: 2px;
+                transition: width 1s;
+            }
+
+            &::before {
+                top: 0;
+                left: 0;
+                transform-origin: left;
+            }
+
+            &::after {
+                bottom: 0;
+                right: 0;
+                transform-origin: right;
+            }
+
+            &:hover::before,
+            &:hover::after {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .hidden {
+        display: none;
+    }
+}

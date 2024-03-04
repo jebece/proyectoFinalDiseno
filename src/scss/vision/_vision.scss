@@ -1,0 +1,42 @@
+@use '../custom' as *;
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+@use 'sass:color';
+
+.vision {
+    @include bg-header(rgba(255, 255, 255, 0.77), rgba(255, 255, 255, 0.77), 'background2.jpg');
+    flex: 1;
+
+    &__content{
+        opacity: 0;
+        transform: translateY(-10%);
+        transition: opacity 1s ease, transform 1s ease;
+    }
+
+    &__title {
+        color: $grey;
+        font-size: $fsize-1;
+    }
+
+    &__text {
+        color: $grey;
+        font-size: $fsize-2;
+    }
+
+    &__image {
+        width: 3.38rem;
+        height: auto;
+        fill: $grey;
+        transition: fill 0.3s ease, transform 0.3s ease;
+
+        &:hover {
+            fill: color.scale($grey, $lightness: 20%);
+            transform: scale(1.1) rotate(5deg);
+        }
+    }
+
+    &__service {
+        color: $grey;
+        font-size: $fsize-4;
+    }
+}

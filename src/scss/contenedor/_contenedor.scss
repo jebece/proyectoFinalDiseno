@@ -1,0 +1,14 @@
+@use '../custom' as *;
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+@use 'sass:color';
+
+.contenedor{
+    @include bg-header(rgba(0, 0, 0, 0.14), rgba(0, 0, 0, 0.14), 'background1.jpg');
+    height: 100vh;  
+    @include media-breakpoint-up(lg){
+        background-image: none;
+        position: relative;
+        display: flex;
+    }
+}

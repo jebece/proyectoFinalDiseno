@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <script src="./js/bootstrap.bundle.js"></script>
+    <!-- <link rel="stylesheet" href="build/css/styles.css"> -->
+    <link rel="stylesheet" href="build/css/styles.min.css">
+    <script src="./js/indexFunctions.js"></script>
+    <link rel="icon" href="./img/logoweb.png" type="image/x-icon">
+
+</head>
+
+<body>
+    <div class="contenedor">
+        <header class="head container-fluid">
+            <div class="row d-lg-flex align-items-lg-center">
+                <div class="head__logo col-lg-2">
+                    <a href="./index.html"><img src="./img/logoweb.png" alt="logo" class="logo img-fluid"></a>
+                </div>
+                <nav class="navigation navbar navbar-expand-lg col-lg-7">
+                    <a class="navigation__logo navbar-brand" href="./index.html">
+                        <img src="./img/logoweb.png" alt="logo" class="logo img-fluid">
+                    </a>
+                    <button class="navigation__hamburguer navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navigation__content collapse navbar-collapse d-lg-flex justify-content-lg-around"
+                        id="navbarNavAltMarkup">
+                        <div class="navigation__links navbar-nav">
+                            <a class="navigation__link nav-link text-center" href="./visionGeneral.html">Visión
+                                General</a>
+                            <a class="navigation__link nav-link ms-lg-3 text-center" href="#">Alojamiento</a>
+                            <a class="navigation__link nav-link ms-lg-3 text-center" href="#">Actividades</a>
+                            <a class="navigation__link nav-link ms-lg-3 text-center" href="./contacto.html">Contacto</a>
+                            <a class="navigation__link nav-link hidden text-center" href="#">Gestionar Reserva</a>
+                        </div>
+                    </div>
+                </nav>
+                <div class="head__button col-lg-3 d-lg-flex justify-content-lg-center align-items-lg-center ">
+                    <button type="button" class="head__btn btn btn-primary btn-lg">Gestionar Reserva</button>
+                </div>
+            </div>
+        </header>
+        <main id="carousel" class="main carousel slide">
+            <div class="main__images carousel-inner">
+                <div class="carousel-item active main__img">
+                    <img src="./img/background.jpg" class="d-block w-100 main__image object-fit-cover" alt="imagen de hotel 1">
+                </div>
+                <div class="carousel-item main__img">
+                    <img src="./img/background2.jpg" class="d-block w-100 main__image object-fit-cover" alt="imagen de hotel 2">
+                </div>
+                <div class="carousel-item main__img">
+                    <img src="./img/background3.jpg" class="d-block w-100 main__image object-fit-cover" alt="imagen de hotel 3">
+                </div>
+            </div>
+            <button class="main__button carousel-control-prev" type="button" data-bs-target="#carousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="main__button carousel-control-next" type="button" data-bs-target="#carousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </main>
+        <section class="searchbar" id="searchbar">
+            <div class="searchbar__links">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item searchbar__link active">
+                        <a class="nav-link active searchbar__title" aria-current="page" href="#">Hoteles</a>
+                    </li>
+                    <li class="nav-item searchbar__link disabled ms-1">
+                        <a class="nav-link searchbar__title" href="#">Hoteles + desplazamiento</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="searchbar__content">
+                <form action="" class="searchbar__form row py-3">
+                    <div class="col-lg-3 d-lg-flex justify-content-center align-items-lg-center">
+                        <div class="searchbar__grafics">
+                            <img src="./img/lupa.png" alt="lupa" class="searchbar__img">
+                        </div>
+                        <div class="searchbar__field ms-2">
+                            <select class="form-select field">
+                                <option selected>DAW Hoteles - Abuya</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 d-lg-flex justify-content-center align-items-lg-center">
+                        <div class="searchbar__grafics">
+                            <img src="./img/calendar.png" alt="calendario" class="searchbar__img">
+                        </div>
+                        <div class="searchbar__field ms-2">
+                            <input type="date" class="form-control field">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 d-lg-flex justify-content-center align-items-lg-center">
+                        <div class="searchbar__grafics">
+                            <svg class="searchbar__svg" height="16" viewBox="0 0 16 16" width="16"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="m4.50210155 9.3741201c-.90792683-.63231469-1.50210155-1.68382892-1.50210155-2.8741201 0-1.93299662 1.56700338-3.5 3.5-3.5s3.5 1.56700338 3.5 3.5c0 1.19029118-.59417472 2.24180541-1.50210155 2.8741201 2.04978735.7995265 3.50210155 2.7931001 3.50210155 5.1258799 0 .1685448-.0075813.335319-.0224215.5h-1.0050429c.0181477-.1641669.0274644-.3309955.0274644-.5 0-2.4852814-2.01471863-4.5-4.5-4.5s-4.5 2.0147186-4.5 4.5c0 .1690045.00931666.3358331.02746439.5h-1.00504288c-.0148402-.164681-.02242151-.3314552-.02242151-.5 0-2.3327798 1.45231416-4.3263534 3.50210155-5.1258799zm1.99789845-.3741201c1.38071187 0 2.5-1.11928813 2.5-2.5s-1.11928813-2.5-2.5-2.5-2.5 1.11928813-2.5 2.5 1.11928813 2.5 2.5 2.5zm4.1848662-.84237851c.2033423-.51293024.3151105-1.07213331.3151338-1.65743839.6072233-.45610317 1-1.18227418 1-2.0001831 0-1.38071187-1.1192881-2.5-2.5-2.5-.46298477 0-.89657462.12585463-1.26842436.3452187-.38009908-.15859607-.78660552-.26655309-1.21109072-.31544242.63373868-.63610749 1.51065375-1.02977628 2.47951508-1.02977628 1.9329966 0 3.5 1.56700338 3.5 3.5 0 1.19029118-.5941747 2.24180541-1.5021015 2.8741201 2.0497873.79952654 3.5021015 2.7931001 3.5021015 5.1258799 0 .1685448-.0075813.335319-.0224215.5h-1.0050429c.0181477-.1641669.0274644-.3309955.0274644-.5 0-2.0752021-1.4047016-3.8223186-3.3151338-4.34237851z"
+                                    fill="#293040" />
+                            </svg>
+                        </div>
+                        <div class="searchbar__field ms-2">
+                            <select class="form-select field">
+                                <option selected>1 Habitación • 2 Adultos</option>
+                                <option>1 Habitación • 2 Adultos y 1 menor</option>
+                                <option>1 Habitación • 2 Adultos y 1 bebé</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 d-lg-flex justify-content-center align-items-lg-center">
+                        <div class="searchbar__grafics">
+                            <svg class="searchbar__svg" fill="none" height="24" viewBox="0 0 24 24" width="24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="m12 2c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10zm-3.27 5.66c.81 0 1.48.66 1.48 1.48 0 .81-.66 1.48-1.48 1.48-.81 0-1.48-.66-1.48-1.48s.66-1.48 1.48-1.48zm.12 8.14c-.15.15-.34.22-.53.22s-.38-.07-.53-.22c-.29-.29-.29-.77 0-1.06l6.55-6.55c.29-.29.77-.29 1.06 0s.29.77 0 1.06zm6.42.54c-.81 0-1.48-.66-1.48-1.48 0-.81.66-1.48 1.48-1.48.81 0 1.48.66 1.48 1.48s-.66 1.48-1.48 1.48z"
+                                    fill="#292d32" />
+                            </svg>
+                        </div>
+                        <div class="searchbar__field ms-2">
+                            <input type="text" class="form-control field" placeholder="Código descuento">
+                        </div>
+                    </div>
+                    <div class="col-lg-2 d-lg-flex justify-content-end">
+                        <button class="btn btn-secondary btn-lg-secondOwn me-3" type="submit">Buscar</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

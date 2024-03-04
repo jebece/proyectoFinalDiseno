@@ -1,0 +1,79 @@
+@use 'base/variables' as *;
+@use 'sass:color';
+// Importamos Bootstrap de node_modules
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+
+// Personalización de los .nav-link
+$nav-link-color: $grey;
+$nav-link-hover-color: color.scale($grey, $lightness: -40%);
+
+// Personalización de btn-primary
+.btn-primary {
+    @include button-variant($dark_green, $grey, $grey, color.scale($dark_green, $lightness: -20%), $grey, $grey, $dark_green, $grey, $grey, $grey, $dark_green, $grey);
+}
+
+// Personalización de btn-secondary
+.btn-secondary {
+    @include button-variant($dark_green, $grey, $white, color.scale($dark_green, $lightness: -20%), $grey, $white, $dark_green, $grey, $white, $dark_green, $grey, $white);
+}
+
+// Personalización botones grandes
+.btn-lg {
+    @include button-size(1rem, 3rem, $fsize-2, 0);
+}
+
+// Creación botones con tamaño propio a partir de mixin Bootstrap 
+.btn-lg-firstOwn {
+    @include button-size(1rem, 5.5rem, $fsize-2, 0);
+}
+
+.btn-lg-secondOwn {
+    @include button-size(1rem, 2.5rem, $fsize-2, 0);
+}
+
+// Personalización de los form-control
+
+// Color del borde
+.form-control {
+    border: var(--bs-border-width) solid $grey;
+}
+
+// Elimino color cuando recibe el foco
+.form-control:focus {
+    border-color: $grey;
+    box-shadow: 0 0 0 0.25rem transparent;
+}
+
+// Personalización de los form-select
+// Adapto el color de la letra
+.form-select {
+    color: $grey;
+    border: var(--bs-border-width) solid $grey;
+}
+
+// Elimino el color del borde cuando recibe el fofo
+.form-select:focus {
+    border-color: $grey;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem transparent;
+}
+
+// Personalización de nav-tabs y sus elementos internos
+.nav-tabs .nav-link {
+    border: var(--bs-nav-tabs-border-width) solid transparent;
+    border-top-left-radius: var(--bs-nav-tabs-border-radius);
+    border-top-right-radius: var(--bs-nav-tabs-border-radius);
+}
+
+.nav-tabs .nav-link:hover,
+.nav-tabs .nav-link:focus {
+    border-color: transparent;
+    color: $grey;
+}
+
+.nav-tabs .nav-link.active {
+    color: $grey;
+    background-color: $light_green;
+    border-color: transparent;
+}

@@ -1,0 +1,22 @@
+@use '../custom' as *;
+@use '../base/variables' as *;
+
+.contacto{
+    flex: 1;
+
+    &__content{
+        opacity: 0;
+        transform: translateY(-10%);
+        transition: opacity 1s ease, transform 1s ease;
+    }
+
+    &__title{
+        font-size: $fsize-1;
+        color: $grey;
+    }
+
+    &__label{
+        font-size: $fsize-2;
+        color: $grey;
+    }
+}

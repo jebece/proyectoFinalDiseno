@@ -1,0 +1,34 @@
+@use '../custom' as *;
+@use '../base/variables' as *;
+
+.header{
+    background-color: hsla(124, 64%, 91%, 0.74);
+    
+    &__logo{
+        display: none;
+    }
+
+    &__button{
+        display: none;
+    }
+    
+    @include media-breakpoint-up(lg){
+        &__logo{
+            display: block;
+        }
+
+        .logo{
+            max-width: 7.66rem;
+            transition: transform 0.3s;
+        }
+
+        .logo:hover{
+            transform: scale(1.1);
+        }
+
+        &__button{
+            display: block;
+        }
+        
+    }
+}

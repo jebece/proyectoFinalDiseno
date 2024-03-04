@@ -1,0 +1,53 @@
+@use '../custom' as *;
+@use '../base/variables' as *;
+
+.searchbar {
+    display: none;
+    width: 95vw;
+
+    @include media-breakpoint-up(lg) {
+        display: block;
+        position: absolute;
+        bottom: 2rem;
+        left: 2rem;
+        z-index: 2;
+        opacity: 0;
+        transform: translateY(-50%);
+        transition: opacity 1s ease, transform 1s ease;
+    }
+
+    &__title {
+        color: $grey;
+    }
+
+    &__content {
+        background-color: $light_green;
+    }
+
+    &__img {
+        width: 2.5rem;
+    }
+
+    &__svg {
+        width: 2.5rem;
+        height: auto;
+        fill: $grey;
+        transition: fill 0.3s ease;
+    }
+}
+
+.active {
+    background-color: $light_green;
+}
+
+.disabled {
+    background-color: $dark_green;
+}
+
+.field {
+    background-color: $light_green;
+}
+
+.field:focus {
+    background-color: $light_green;
+}
